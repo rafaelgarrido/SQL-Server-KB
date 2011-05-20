@@ -1,0 +1,34 @@
+
+Get information of deadlocks.
+
+It does NOT require any service restart. If the service is restarted the trace is reset to OFF.
+
+
+To check the current traces that are enabled:
+
+-- SQL 2000
+dbcc tracestatus(-1)
+
+-- SQL 2005
+dbcc tracestatus
+
+
+To enable it:
+
+-- SQL 2000
+dbcc traceon (1204, 3605, -1)
+--1204 gets Deadlock info; 3605 sends trace to the error log file
+
+-- SQL 2005
+dbcc traceon (1222, -1) 
+--1222 gets Deadlock info and logs into Error log; -1 global trace
+
+
+To disable:
+
+-- SQL 2000
+dbcc traceoff (1204, 3605)
+
+-- SQL 2005
+dbcc traceoff (1222)
+

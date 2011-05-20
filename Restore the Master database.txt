@@ -1,0 +1,35 @@
+sQL 2005.
+
+
+Exclusive access:
+------------------
+Using cmd, go to
+C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Binn
+
+execute
+sqlservr.exe -m
+
+the screen will be open showing SQL activities.
+
+Restore
+-------
+Open Management Studio. Do NOT connect using the Object Explorer, connect openning just a simple Query Window.
+
+Run this to restore:
+restore database master from 
+disk = 'D:\<PATH>\<FILE NAME>.bak'
+WITH 
+MOVE 'master' TO 'C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\master.mdf'
+, MOVE 'mastlog' TO 'C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\mastlog.ldf'
+, REPLACE
+
+
+MSDB
+----
+RESTORE DATABASE msdb FROM 
+DISK = 'D:\<PATH>\<FILE NAME>.bak'
+WITH 
+MOVE 'MSDBData' TO 'C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\MSDBData.mdf'
+, MOVE 'MSDBLog' TO 'C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\MSDBLog.ldf'
+, REPLACE
+

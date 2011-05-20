@@ -1,0 +1,26 @@
+
+
+Is it very slow to retrieve a report once a day or the first time on the day?
+It is possible the w3wp service is loading for the first time after the Application Pool was recycled.
+
+
+
+Put this code in a .vbs file. It loads the page without showing any output.
+
+Change the <ReportServerName> and <ReportName> parameter.
+
+You can create a job that executes this .vbs in a scheduled basis
+
+----------------------------------------------
+
+Dim HTTP
+Dim url
+url = "http://<ReportServerName>/Reports/Pages/Report.aspx?ItemPath=%2f<ReportName>" 
+set xmlhttp = CreateObject("MSXML2.XMLHTTP") 
+xmlhttp.open "GET", url, false
+xmlhttp.send
+set xmlhttp = nothing 
+
+----------------------------------------------
+
+

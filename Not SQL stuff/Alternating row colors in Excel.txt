@@ -1,0 +1,16 @@
+
+If you wish to set up alternating row colors in Excel:
+
+1. Highlight the rows that you wish to apply the formatting to.
+
+2. Under the Format menu, select Conditional Formatting.
+
+3. When the Conditional Formatting window appears, select "Formula Is" in the drop down. 
+	Then enter the following formula:
+	=mod(row(),2)=1
+
+4. Select the color you want to see in the alternating rows clicking on the Format button.
+
+5. When the Format Cells window appears, select the Patterns tab. Then select the color that you'd like.
+
+6. Click OK button.

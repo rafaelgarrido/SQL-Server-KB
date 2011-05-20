@@ -1,0 +1,29 @@
+The Service Controller utility SC is a powerful command-line utility for managing Windows services.
+http://commandwindows.com/sc.htm 
+
+sc /?
+
+Command Function 
+sc config  Configures service startup and login accounts 
+sc continue  Resumes a paused service 
+sc enumdepend  Lists the services that cannot run unless the specified service is running
+ 
+sc failure  Specifies what action to take upon failure of the service 
+sc pause Pauses a service  
+sc qc  Displays the configuration of a particular service  
+sc query  Displays information about the specified service, driver, type of service, or type of driver 
+sc start Starts a service running 
+sc stop  Sends a STOP request to a service (not all will respond)  
+
+i.e.
+
+sc query > serviceslist.txt 
+
+The path for the text file serviceslist.txt can be anywhere that is convenient. To create a list of all services, use
+sc query type= service state= all > allserviceslist.txt 
+
+To create a list of active drivers, use 
+sc query type= driver 
+
+Or for a list of everything, use 
+sc query state= all 

@@ -1,0 +1,21 @@
+
+=====================
+An exception of type 'System.Data.SqlClient.SqlException' occurred in System.Data.dll but was not handled in user code
+
+Additional information: EXECUTE permission denied on object 'sp_sdidebug', database 'master', owner 'dbo'.
+=====================
+
+A quick bit of googling reveals that this isn't a uncommon but it's related to SQL debugging and I wasn't attempting to do that. None of my VS projects had 'Enable SQL Debugging' checked. Fortunately the solution was quite straightforward : when attaching the aspnet_wp.exe process to VS, make sure you are only attach managed code.
+
+Click Tools > Attach to Process
+Click the Select button just above the list of available processes to attach to
+Select 'Debug these code types' and check only the boxes for Managed (and Native i fnecessary) code.
+Click OK
+Click Attach
+Debug as normal
+
+
+--------------------------------------
+
+
+Once we got this error in a Windows Service, reinstalling it solved the problem.

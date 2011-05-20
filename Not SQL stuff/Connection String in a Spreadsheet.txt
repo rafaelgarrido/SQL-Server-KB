@@ -1,0 +1,15 @@
+
+to verify the connection from an Excel spreadsheet:
+
+open the VB interface (Alt+F11) and type in the immediate window:
+
+?Sheet1.QueryTables(1).Connection
+
+press <enter>
+
+
+result:
+ODBC;DSN=<dsnName>;UID=<User>;APP=Microsoft® Query;WSID=<workstation>;DATABASE=<db_name>;Network=DBMSSOCN;Address=<server>,1433;Trusted_Connection=Yes
+
+This case it uses Windows Integrated security even though there is a UID parameter.
+

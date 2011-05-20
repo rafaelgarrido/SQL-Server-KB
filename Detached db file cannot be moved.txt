@@ -1,0 +1,16 @@
+PROBLEM
+
+Detached database is still "in use".
+
+I detached a database. I tried to move the LDF files to a new location. 
+I receive the following error 
+"Cannot move <database>: Access is denied. Make sure the disk is not full or 
+write-protected and that the file is not currently in use".
+
+=====================
+ANSWER
+
+The "Access Denied" is caused because in SQL 2005+ the user who detached 
+the database is the only user who has rights to the files.
+
+

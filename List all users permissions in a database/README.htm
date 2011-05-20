@@ -1,0 +1,33 @@
+<html>
+<body>
+
+<BR><BR>
+This gives us a friendly report of the permissions.
+<BR>
+The result will look like:
+<BR><BR>
+
+<TABLE border=1pt>
+<TR><TD>DB</TD><TD>Name</TD><TD>Type</TD><TD>RoleName</TD><TD>objectname</TD><TD>SELECT</TD><TD>INSERT</TD><TD>UPDATE</TD><TD>DELETE</TD><TD>EXECUTE</TD></TR>
+<TR><TD>Contoso</TD><TD>BUILTIN\Administrators</TD><TD>NT Group</TD><TD>sysadmin</TD><TD>(all databases and its objects)</TD><TD>Yes</TD><TD>Yes</TD><TD>Yes</TD><TD>Yes</TD><TD>Yes</TD></TR>
+<TR><TD>Contoso</TD><TD>dbo</TD><TD>SQL User</TD><TD>db_owner</TD><TD>(all database objects)</TD><TD>Yes</TD><TD>Yes</TD><TD>Yes</TD><TD>Yes</TD><TD>Yes</TD></TR>
+<TR><TD>Contoso</TD><TD>userHR</TD><TD>SQL User</TD><TD>db_datareader</TD><TD>(all database objects)</TD><TD>Yes</TD><TD>No</TD><TD>No</TD><TD>No</TD><TD>No</TD></TR>
+<TR><TD>Contoso</TD><TD>sa</TD><TD>SQL User</TD><TD>sysadmin</TD><TD>(all databases and its objects)</TD><TD>Yes</TD><TD>Yes</TD><TD>Yes</TD><TD>Yes</TD><TD>Yes</TD></TR>
+<TR><TD>Contoso</TD><TD>Domain\Database Admin</TD><TD>NT Group</TD><TD>sysadmin</TD><TD>(all databases and its objects)</TD><TD>Yes</TD><TD>Yes</TD><TD>Yes</TD><TD>Yes</TD><TD>Yes</TD></TR>
+<TR><TD>Contoso</TD><TD>Domain\Production Team</TD><TD>NT Group</TD><TD>db_datareader</TD><TD>(all database objects)</TD><TD>Yes</TD><TD>No</TD><TD>No</TD><TD>No</TD><TD>No</TD></TR>
+<TR><TD>Contoso</TD><TD>userAuditViewer</TD><TD>SQL User</TD><TD>role_AuditViewer</TD><TD>Audit</TD><TD>Yes</TD><TD>No</TD><TD>No</TD><TD>No</TD><TD>N/A</TD></TR>
+<TR><TD>Contoso</TD><TD>userReconciliation</TD><TD>SQL User</TD><TD>role_Reconciliation</TD><TD>Account</TD><TD>Yes</TD><TD>No</TD><TD>No</TD><TD>No</TD><TD>N/A</TD></TR>
+<TR><TD>Contoso</TD><TD>userReconciliation</TD><TD>SQL User</TD><TD>role_Reconciliation</TD><TD>Customer</TD><TD>Yes</TD><TD>No</TD><TD>No</TD><TD>No</TD><TD>N/A</TD></TR>
+<TR><TD>Contoso</TD><TD>userReconciliation</TD><TD>SQL User</TD><TD>role_Reconciliation</TD><TD>Product</TD><TD>Yes</TD><TD>No</TD><TD>No</TD><TD>No</TD><TD>N/A</TD></TR>
+<TR><TD>Contoso</TD><TD>userTradeSystem</TD><TD>SQL User</TD><TD>role_TradeSystem</TD><TD>spGetAllLimitChanges</TD><TD>N/A</TD><TD>N/A</TD><TD>N/A</TD><TD>N/A</TD><TD>Yes</TD></TR>
+<TR><TD>Contoso</TD><TD>userTradeSystem</TD><TD>SQL User</TD><TD>role_TradeSystem</TD><TD>spGetAllUsers</TD><TD>N/A</TD><TD>N/A</TD><TD>N/A</TD><TD>N/A</TD><TD>Yes</TD></TR>
+<TR><TD>Contoso</TD><TD>userTradeSystem</TD><TD>SQL User</TD><TD>role_TradeSystem</TD><TD>spGetUserAndLimits</TD><TD>N/A</TD><TD>N/A</TD><TD>N/A</TD><TD>N/A</TD><TD>Yes</TD></TR>
+<TR><TD>Contoso</TD><TD>Bill</TD><TD>NT User</TD><TD>(n/a)</TD><TD>CertificateMaster</TD><TD>Yes</TD><TD>No</TD><TD>No</TD><TD>No</TD><TD>N/A</TD></TR>
+<TR><TD>Contoso</TD><TD>Bill</TD><TD>NT User</TD><TD>(n/a)</TD><TD>DirectDeposit</TD><TD>Yes</TD><TD>No</TD><TD>No</TD><TD>No</TD><TD>N/A</TD></TR>
+<TR><TD>Contoso</TD><TD>Bill</TD><TD>NT User</TD><TD>(n/a)</TD><TD>spCustodySum</TD><TD>N/A</TD><TD>N/A</TD><TD>N/A</TD><TD>N/A</TD><TD>Yes</TD></TR>
+<TR><TD>Contoso</TD><TD>Bill</TD><TD>NT User</TD><TD>(n/a)</TD><TD>spCustodyMonthlyReport</TD><TD>N/A</TD><TD>N/A</TD><TD>N/A</TD><TD>N/A</TD><TD>Yes</TD></TR>
+</TABLE>
+
+
+</body>
+</html>
